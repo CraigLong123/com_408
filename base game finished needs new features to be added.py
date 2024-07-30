@@ -11,7 +11,7 @@ screen_width = 720
 game_screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Snake Game Xtreme')
 
-# Colors
+# Colours to reference quickly by saving them as a varaible
 black = (0, 0, 0)
 white = (255, 255, 255)
 red = (255, 0, 0)
