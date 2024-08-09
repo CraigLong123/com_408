@@ -38,6 +38,8 @@ score = 0
 # Frame controller
 fps = pygame.time.Clock()
 
+
+
 # Displaying score function, scoreboard that displays the score and ensures that it is visible and correct 
 def show_score(color, font, size):
     score_font = pygame.font.SysFont(font, size)
@@ -45,7 +47,7 @@ def show_score(color, font, size):
     score_rect = score_surface.get_rect()
     game_screen.blit(score_surface, score_rect)
 
-# Game over function, making sure that when the game ends that it will pause to let the player see their score and make sure that it will auto reset after some time
+# Game over function, making sure that when the game ends that it will pause to let the player see their score and make sure that it will close after a small delay
 def game_over():
     my_font = pygame.font.SysFont('gothic', 50)
     game_over_surface = my_font.render('Your score is : ' + str(score), True, red)
@@ -123,17 +125,22 @@ while True:
     fps.tick(snake_speed)
 
     # base game completed above new features should be added below, new aim features time limit and speed change
+   #feature to make the snake speed up 
     if score==5:
         snake_speed+=0.1
     if score == 10:
-        snake_speed+=0.05
+        snake_speed+=0.1
     if score==15:
-        snake_speed+=0.025
+        snake_speed+=0.1
     if score==20:
-        snake_speed+=0.0025
+        snake_speed+=0.1
+    if score== 25:
+        snake_speed+=0.1
+   
+        
 
 
-    if score==2:
-        game_screen.blit(pygame.transform.rotate(game_screen, 180))
-  
+
+
+            
 
